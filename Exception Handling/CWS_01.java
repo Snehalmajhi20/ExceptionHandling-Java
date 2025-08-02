@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+public class CWS_01 {
+    public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+       // while (true){
+            try {
+                System.out.println("Enter the number: ");
+                int a = sc.nextInt();
+                System.out.println(11/a);
+                System.out.println("Enter the name: ");
+                String name = sc.next();
+                System.out.print("Enter the index to fetch character from name: ");
+                int index = sc.nextInt();
+                System.out.println("Character at index " + index + ": " + name.charAt(index));
+                String b = null;
+                int d = b.length();
+                System.out.println(d);
+            }
+            catch (ArithmeticException e){
+                System.out.println("Arithematic Exception!: "+e.getMessage());
+            }
+            catch (StringIndexOutOfBoundsException a){
+                System.out.println("name len: "+a.getMessage());
+            }
+            catch(NullPointerException c){
+                System.out.println("Null: "+c.getMessage()2);
+            }
+			finally {
+            sc.close();
+        }
+       // }
+    }
+}
