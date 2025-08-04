@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+class CovidPassangerNotAllowedException extends Exception
+{
+	public CovidPassangerNotAllowedException(String message){
+		System.out.println(message);
+	}
+}
+class CWS_05 
+{
+	public static void main(String[] args) throws CovidPassangerNotAllowedException
+	{
+		while(true){
+			Scanner sc = new Scanner(System.in);
+			System.out.println("Enter the COVID Status: ");
+			String status = sc.next();
+			if(status.equals ("Negative")){
+				System.out.println("Your status is Negative and you can travellled........!");
+			}
+			else {
+				throw new CovidPassangerNotAllowedException("Oooops..... your status is: Positive and you are not allowed to travel.....!");
+			}
+		}
+	}
+}
