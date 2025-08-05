@@ -18,7 +18,7 @@ class ATM
 				if (balance>amount) {
 					throw new InsufficientBalanceException("Not enough balance!");
 				} else {
-					balance -= amount;
+					balance = amount-balance;
 					System.out.println("Withdrawal successful. Remaining balance: " + balance);
 				}
 			} catch (InsufficientBalanceException e) {
@@ -29,3 +29,4 @@ class ATM
 		}
 	}
 }
+
